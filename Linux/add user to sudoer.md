@@ -24,6 +24,12 @@ sh
 sudo visudo
 ```
 
+NB : install sudo  if needed (as root): 
+
+```
+pacman -S sudo
+```
+
 Look for this line (uncomment it if needed):
 
 Code

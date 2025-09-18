@@ -1,28 +1,21 @@
-1 - create CT
-- [[create arch linux CT with Web UI]]
-- [[create arch linux CT with cli]]
+1 - create VM
+- [[create arch linux VM with Web UI]]
 
-CLI exemple : 
+3 - connect to the VM 
+![[Pasted image 20250917143100.png]]
+
+
+add your ssh public key to the file /root/.ssh/authorized_keys
 
 ```
-pct create 201 synology-backup:vztmpl/archlinux-base_20240911-1_amd64.tar.zst \
-  --hostname obsidian \
-  --unprivileged 1
-  --rootfs local-lvm:8 \
-  --cores  1 \
-  --memory 512 \
-  --net0 name=eth0,bridge=vmbr0,ip=dhcp \
-  --ssh-public-keys /path/to/public_key.pub
-  --password {ROOT_PASSWORD}
+pacman -Sy vi
+vi /root/.ssh/authorized_keys
 ```
 
-2 - [[start proxmox container]]
-
-3 - connect to the container 
-![[Pasted image 20250916163223.png]]
 
 4 - start ssh
 ```
+pacman -Sy openssh
 systemctl status sshd
 systemctl enable sshd
 systemctl start sshd
@@ -35,15 +28,13 @@ you should have the following result
 
 5 - check firewall 
 
-6 - [[update pacman in new arch linux machine]]
-
 7 - add other user : 
-- add ldap
+- [[add ldap users to VM]]
 - add local user
 
 8 - [[add user to sudoer]]
 
-9 - install pacman packages
+9 - iystall pacman packages
 
 ```
 sudo pacman -Syu
@@ -52,6 +43,12 @@ sudo pacman -S git nodejs npm xorg-server-xvfb base-devel
 
 10 - [[install yay on arch linux]]
 
+11 - install hyprland-git
+
+```
+yay -S hyprland-git
+```
+N.B: i would i love to avoid this but it is needed to run obsidian "html server" plugin
 
 11 - install obsidian
 
@@ -80,8 +77,13 @@ git branch -M main
 git push -u origin main
 ```
 
-14 - add cron job to pull changes
+if repo already exists :
 
+```
+git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+```
+
+14 - add cron job to pull changes
 
 bash
 
@@ -139,4 +141,20 @@ set your task to execute every 15 minutes
 then save and you should have the following result : 
 ![[Pasted image 20250916234913.png]]
 
-15 - start obsidian
+15 - start obsidian and open the folder with the git repo 
+
+![[Pasted image 20250917233913.png]]
+
+![[Pasted image 20250917233958.png]]
+
+![[Pasted image 20250917234022.png]]
+
+check that the html server is up :
+
+```
+ss -tuln
+```
+
+you should see a line with ":8080" with a state "LISTEN"
+
+![[Pasted image 20250917234307.png]]

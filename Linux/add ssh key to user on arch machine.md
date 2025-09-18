@@ -11,6 +11,15 @@ N.B: key generated for test and removed
 two files should have been created : 
 ![[Pasted image 20250916230402.png]]
 
+Alternatively you can copy the keys (public an private and public)
+you need to check the permisson and limit it :
+
+```
+chmod 600 ~/.ssh/{SSH_KEY}
+chmod 600 ~/.ssh/{SSH_KEY}.pub
+```
+
+
 2 - start the ssh-agent on the machine 
 
 ```
