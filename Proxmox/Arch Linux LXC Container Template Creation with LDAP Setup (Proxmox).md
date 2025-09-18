@@ -241,4 +241,4 @@ _(Assign a hookscript if you want further automation after creation.)_
 **Let me know if you need a ready-to-run script for the LDAP setup inside Arch, or a sample hookscript for further automation!**
 
 
-to update password : **ldappasswd -x -D "cn=admin,dc=otto-bus,dc=dev" -W -s 'G*t7!e6vMsf5%4' "uid=otto,dc=otto-bus,dc=dev"**
+to update password : **ldappasswd -x -D "cn=admin,dc=otto-bus,dc=dev" -W -s '{YOUR_PASSWORD}' "uid=otto,dc=otto-bus,dc=dev"**

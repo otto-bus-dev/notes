@@ -5,7 +5,7 @@
 
 .with-error {
   border-color: var(--text-error) !important;
-} 
+}
 
 .with-success {
   border-color: var(--text-success) !important;
@@ -41,22 +41,22 @@
   margin: auto;
 }
 
-.html-login-form .html-login-form-label{
+.html-login-form .html-login-form-label {
   font-size: 1.1em;
   justify-content: center;
   display: block;
 }
 
-.html-login-form .setting-item-control input{
+.html-login-form .setting-item-control input {
   width: 100%;
 }
 
-.html-login-form .html-form-button{
+.html-login-form .html-form-button {
   width: 100%;
   /* justify-content: center; */
 }
 
-.html-login-form .html-form-button button{
+.html-login-form .html-form-button button {
   width: 100%;
   justify-content: center;
 }
@@ -65,3 +65,60 @@
   color: var(--text-accent);
   opacity: 0.95;
 }
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.menu {
+  width: 250px;
+  min-width: 200px;
+  max-width: 300px;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--rp-base);
+}
+
+/* The draggable "thumb" part */
+::-webkit-scrollbar-thumb {
+  background: var(--rp-surface);
+  border-radius: 5px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rp-overlay);
+}
+
+/* The track (background) */
+::-webkit-scrollbar-track {
+  background: var(--rp-base);
+}
+/**/
+/* --rp-base: #232136; */
+/* --rp-surface: #2a273f; */
+/* --rp-overlay: #393552; */
+/* --rp-muted: #6e6a86; */
+/* --rp-subtle: #908caa; */
+/* --rp-text: #e0def4; */
+/* --rp-love: #eb6f92; */
+/* --rp-gold: #f6c177; */
+/* --rp-rose: #ea9a97; */
+/* --rp-iris: #c4a7e7; */
+/* --rp-pine: #3e8fb0; */
+/* --rp-foam: #9ccfd8; */
+/* --rp-highlightLow: #2a283e; */
+/* --rp-highlightMed: #44415a; */
+/* --rp-highlightHigh: #56526e; */
