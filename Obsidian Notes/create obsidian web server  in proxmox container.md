@@ -56,7 +56,7 @@ N.B: i would i love to avoid this but it is needed to run obsidian "html server"
 yay -S obsidian
 ```
 
-12 - [[add ssh key to user on arch machine]]
+12 - [[add ssh key to server on arch machine to access repo]]
 
 13 - create a repo for obsidian notes
 
@@ -85,42 +85,7 @@ git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
 
 14 - add cron job to pull changes
 
-bash
-
-```
-nano ~/obsidian-pull.sh
-```
-
-Paste this content:
-
-bash
-
-```
-#!/bin/bash
-cd ~/ObsidianVault || exit 1
-git fetch origin
-git reset --hard origin/main
-```
-
-- This script fetches changes and resets the local branch to match the remote, discarding any local edits.
-
-Make it executable:
-
-bash
-
-```
-chmod +x ~/obsidian-pull.sh
-```
-
-you can test your script by changing the repo from github  and running this script : 
-
-```
-~/obsidian-pull.sh
-```
-
-you should have something like this
-![[Pasted image 20250916233944.png]]
-we can see that the readme file has been updated
+on the obsidian server 
 
 14.1 - install cron
 
@@ -135,7 +100,7 @@ crontab -e
 
 set your task to execute every 15 minutes
 ```
-*/15 * * * * /home/{YOUR_USER_NAME}/obsidian-pull.sh
+*/15 * * * * cd {YOUR_REPO_PATH} && git pull
 ```
 
 then save and you should have the following result : 
