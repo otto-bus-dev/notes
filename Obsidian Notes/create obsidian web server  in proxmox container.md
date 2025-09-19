@@ -87,10 +87,12 @@ git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
 
 on the obsidian server 
 
-14.1 - install cron
+14.1 - install cron and start service
 
 ```
 yay -Sy cronie
+systemctl enable cronie
+systemctl start cronie
 ```
 
 14.2 - add cron task 
