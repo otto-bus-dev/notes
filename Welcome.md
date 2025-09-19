@@ -1,83 +1,98 @@
 
-```dataviewjs
-dv.list()
-```
-```dataviewjs
-for (let group of dv.pages("#book").where(p => p["time-read"].year == 2021).groupBy(p => p.genre)) {
-	dv.header(3, group.key);
-	dv.table(["Name", "Time Read", "Rating"],
-		group.rows
-			.sort(k => k.rating, 'desc')
-			.map(k => [k.file.link, k["time-read"], k.rating]))
-}
-```
-```dataviewjs
-function groupBy(array, fn) {
-    let groups = {};
-    for (let item of array) {
-        let key = fn(item) ?? 'undefined';
-        if (!groups[key]) groups[key] = [];
-        groups[key].push(item);
-    }
-    return Object.entries(groups).map(([key, rows]) => ({key, rows}));
-}
 
-function displayFolder(folder, level, path){
-	let folder_rows = folder.rows.filter(
-			page => page.path.contains(path)
-		)
-	let folder_path = path;
-			if (path == ""){
-				folder_path = "none";
-			}else{
-				folder_path = path;
-			}
-	for (let sub_folder of groupBy(
-		folder_rows, 
-		page => page['level_' + level ]
-	)) {
-		if( sub_folder.key !== "" && sub_folder.key !== null && sub_folder.key !== 'undefined'){
-			let sub_folder_path = path;
-			if (path == ""){
-				sub_folder_path = sub_folder.key;
-			}else{
-				sub_folder_path = path + "/" + sub_folder.key;
-			}
-			dv.header(3+level, sub_folder.key, {cls: "folder level_" + level, attr: { id: sub_folder_path  ,  folder: folder_path }});
-			
-			//dv.el("div", sub_folder_path )
-			displayFolder(sub_folder,level + 1, sub_folder_path)
-			
+```dataviewjs
+
+const folder_replacement = '_21_';
+const space_replacement = '_20_';
+const pages = dv.pages().map(
+	page => {
+		return {
+			name : page.file.name,
+			link : page.file.link,
+			folder : page.file.folder
 		}
 	}
-	for (let folder_content of folder_rows.filter(page => page.path==path)) {
-		dv.el("div", folder_content.file.link, { cls: "level_" + level, attr: { folder: folder_path } })
-	}
-	/*
-	for (let folder_content of folder_rows) {
-		//if( folder_content.page['level_' + level] == null){
-			dv.el("div", folder_content.file.link)
-		//}
-	}*/
+);
+
+function getId(path){
+	return path.replace(/\//g,folder_replacement)
+			.replace(/ /g,space_replacement);
 }
-
-let pages = [];
-for (let page of dv.pages()) {
-	let i = 0;
-	let new_page = {
-		path:page.file.folder,
-		file :page.file
-	}
-	for (let path_part of new_page.path.split('/')){
-		new_page["level_" + i] = path_part
-		i++;
-	}
-	pages.push(new_page)
+const TYPE = {
+	FILE:0,
+	FOLDER:1
 }
-
-displayFolder({
-	rows : pages
-},0,"");
-
-
+function getInfo(path,type){
+	let folders = [];
+	let folder_parts = path === ""?[]:path.split('/');
+	let i = folder_parts.length - type;
+	while(i>0){
+		folders.push(folder_parts.slice(0,i)
+			.join(folder_replacement)
+			.replace(/ /g,space_replacement)
+		);
+		i--;
+	}
+	return {
+		id : path.replace(/\//g,folder_replacement)
+			.replace(/ /g,space_replacement),
+		parent_id : folders.length > 0 ? folders[0]:'none',
+		class : (type === TYPE.FOLDER ? "folder " : "file ") + "level_" + folders.length + " " + folders.join(' ')
+	}}
+function buildTreeNode(id){
+	let level = id === ""?0:id.split('/').length;
+	
+	let children = pages.filter(
+		page => page.folder.contains(id)
+	);
+	
+	[...new Set(
+		children.filter(
+			page => page.folder != id
+		).map(
+			page => page.folder.split('/').slice(0,level+1).join("/")
+		)
+	)].map(
+		folder => {
+			let folder_info = getInfo(folder,TYPE.FOLDER);
+			dv.el(
+				"div"
+				, folder
+				, { 
+					cls: folder_info.class,
+					attr : {
+						id : folder_info.id,
+						parent_id : folder_info.parent_id
+					}
+				}
+			)
+			buildTreeNode(folder);
+			dv.el(
+				"div"
+				, ""
+				, { 
+					cls: "folder_separator",
+				}
+			);
+		}
+	)
+	children.filter(
+		page => page.folder == id
+	).map(
+		page => {		
+			let file_info = getInfo(page.folder,TYPE.FILE);
+			dv.el(
+				"div"
+				, page.link
+				, { 
+					cls: file_info.class,
+					attr : {
+						parent_id : file_info.parent_id
+					}
+				}
+			);
+		}
+	);
+}
+buildTreeNode("");
 ```

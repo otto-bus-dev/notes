@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LDAP Server/Add password manager.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Add password manager"
+              "title": "Welcome"
             }
           }
         ],
@@ -340,8 +340,9 @@
       "html-server:Turn Http Server Off": false
     }
   },
-  "active": "35a44ef0173fe949",
+  "active": "77f3d8c3ee2a5ebb",
   "lastOpenFiles": [
+    "LDAP Server/Add password manager.md",
     "Obsidian Notes/create obsidian web server  in proxmox container.md",
     "Welcome.md",
     "Untitled 1.base",
@@ -380,7 +381,6 @@
     "Untitled.base",
     "Untitled 2.base",
     "Linux",
-    "LDAP Server/Add password manager.md",
     "Proxmox/test/dddddd.md",
     "Proxmox/level 2",
     "Untitled 1",

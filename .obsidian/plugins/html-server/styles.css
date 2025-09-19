@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "JetBrainsMono Nerd Font";
+  src: url("https://ludovic-delaunay.fr/fonts/JetBrainsMonoNerdFontMono-Regular.ttf")
+    format("truetype");
+  /* src: url("/fonts/JetBrainsMonoNerdFontMono-Regular.ttf") format("truetype"); */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hack Nerd Font";
+  src: url("https://ludovic-delaunay.fr/fonts/HackNerdFontMono-Regular.ttf")
+    format("truetype");
+  /* src: url("/fonts/HackNerdFontMono-Regular.ttf") format("truetype"); */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", monospace;
+}
 .settings-error-element {
   font-weight: bold;
   color: var(--background-modifier-error);
@@ -71,18 +90,31 @@
   height: 100vh;
 }
 .menu {
-  width: 250px;
-  min-width: 200px;
-  max-width: 300px;
-  border-right: 1px solid #ddd;
+  background-color: var(--rp-surface);
+  border-right: 0;
+  border-radius: 0;
   padding: 1rem;
   overflow-y: auto;
+  /* width: 249px; */
+  /* min-width: 199px; */
+  /* max-width: 299px; */
+  /* border-right: 1px solid #ddd; */
+  /* padding: 1rem; */
+  /* overflow-y: auto; */
+  width: 50px;
+  height: 100%;
+}
+.menu.expanded {
+  width: auto; 
 }
 .content {
-  margin-left: 250px;
+  margin-left: 50px;
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
+}
+.menu.expanded + .content {
+/* margin-left: 250px; */
 }
 
 /* The entire scrollbar */
@@ -106,6 +138,93 @@
 ::-webkit-scrollbar-track {
   background: var(--rp-base);
 }
+.menu .menu_content {
+  display: none;
+}
+.menu.expanded .menu_content {
+  display: initial;
+}
+
+.menu .expand_collapse.nf-md-menu {
+  text-align: center;
+  font-size:2rem;
+}
+.menu .expand_collapse.nf-md-menu:before {
+  content: "\f035c";
+}
+
+.menu.expanded .expand_collapse.nf-md-menu {
+  text-align: right;
+}
+.menu.expanded .expand_collapse.nf-md-menu:before {
+  content: "\f0156";
+}
+
+.folder {
+  display: flex;
+  justify-content: space-between;
+}
+.folder:after {
+  content: "\eab4";
+  font-size: 1.5rem; */
+  /* line-height: height; */
+  vertical-align: middle;
+  margin-left:0.5rem;
+}
+
+.folder.selected:after {
+  content: "\eab7";
+}
+.folder.level_0 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.folder.level_1 {
+  font-size: 1.5rem;
+}
+.folder.level_2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.folder.level_3 {
+  font-size: 1.3rem;
+}
+.folder.level_4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.folder.level_5 {
+  font-size: 1rem;
+}
+
+.file a {
+  text-decoration: none;
+}
+.folder_separator:not(:last-child){
+  border-bottom: 1px solid var(--rp-overlay);
+  margin-bottom:-1px;
+}
+
+.level_0 {
+  margin-left:0.5rem;
+}
+.level_1 {
+  margin-left:1rem;
+}
+.level_2 {
+  margin-left:1.5rem;
+}
+.level_3 {
+  margin-left:2rem;
+}
+.level_4 {
+  margin-left:2.5rem;
+}
+.level_5 {
+  margin-left:3rem;
+}
+
+
 /**/
 /* --rp-base: #232136; */
 /* --rp-surface: #2a273f; */
