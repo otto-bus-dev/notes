@@ -359,7 +359,7 @@
     "reverse proxy/create https certificate and add it to DNS.md",
     "Pasted image 20250918174809.png",
     "README.md",
-    "proxmox firewall.md",
+    "Proxmox/proxmox firewall.md",
     "LDAP Server/add ldap users to VM.md",
     "LDAP Server/add ldap users to CT machine.md",
     "Linux/add ssh key to server on arch machine to access repo.md",
@@ -385,6 +385,6 @@
     "Proxmox/level 2",
     "Untitled 1",
     "Proxmox",
-    "postfix on proxmox.md"
+    "Proxmox/postfix on proxmox.md"
   ]
 }
