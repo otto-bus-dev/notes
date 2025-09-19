@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "Obsidian Notes/create obsidian web server  in proxmox container.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "create obsidian web server  in proxmox container"
             }
           }
         ],
@@ -342,8 +342,8 @@
   },
   "active": "77f3d8c3ee2a5ebb",
   "lastOpenFiles": [
-    "Untitled 1.base",
     "Welcome.md",
+    "Untitled 1.base",
     "Proxmox/level 2/level 2 note.md",
     "Proxmox/level 2/level 3/level 3 note.md",
     "Proxmox/Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox).md",
