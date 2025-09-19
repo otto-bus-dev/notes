@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian Notes/create obsidian web server  in proxmox container.md",
+                "file": "LDAP Server/Add password manager.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "create obsidian web server  in proxmox container"
+              "title": "Add password manager"
             }
           }
         ],
@@ -340,8 +340,9 @@
       "html-server:Turn Http Server Off": false
     }
   },
-  "active": "77f3d8c3ee2a5ebb",
+  "active": "35a44ef0173fe949",
   "lastOpenFiles": [
+    "Obsidian Notes/create obsidian web server  in proxmox container.md",
     "Welcome.md",
     "Untitled 1.base",
     "Proxmox/level 2/level 2 note.md",
@@ -361,7 +362,6 @@
     "proxmox firewall.md",
     "LDAP Server/add ldap users to VM.md",
     "LDAP Server/add ldap users to CT machine.md",
-    "Obsidian Notes/create obsidian web server  in proxmox container.md",
     "Linux/add ssh key to server on arch machine to access repo.md",
     "Pasted image 20250918175625.png",
     "Linux/add ssh key to user on arch machine.md",
@@ -380,7 +380,7 @@
     "Untitled.base",
     "Untitled 2.base",
     "Linux",
-    "Add password manager.md",
+    "LDAP Server/Add password manager.md",
     "Proxmox/test/dddddd.md",
     "Proxmox/level 2",
     "Untitled 1",
