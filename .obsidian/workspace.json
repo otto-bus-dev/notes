@@ -8,189 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4f4fb708d18c5c88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "implement https.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "implement https"
-            }
-          },
-          {
-            "id": "3cc3915c36740181",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "implement https.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "implement https"
-            }
-          },
-          {
-            "id": "9ea1637d25ca9a41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "implement https.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "implement https"
-            }
-          },
-          {
-            "id": "af0d0ba41e6119d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "implement https.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "implement https"
-            }
-          },
-          {
-            "id": "6e0fc510b38d8ac7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "implement https.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "implement https"
-            }
-          },
-          {
-            "id": "eb15acb630692242",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox)"
-            }
-          },
-          {
-            "id": "5e5386424d277236",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "add ldap to new container arch.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "add ldap to new container arch"
-            }
-          },
-          {
-            "id": "e6a12f51e2b75dc3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "proxmox firewall.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "proxmox firewall"
-            }
-          },
-          {
-            "id": "80f987f4cbc46c53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "8bcc5371f7942654",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian Notes/create obsidian web server  in proxmox container.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "create obsidian web server  in proxmox container"
-            }
-          },
-          {
-            "id": "0f9004a854d3bf4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Add password manager.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Add password manager"
-            }
-          },
-          {
-            "id": "94c5a9057d7b6486",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/install yay on arch linux.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "install yay on arch linux"
-            }
-          },
-          {
             "id": "77f3d8c3ee2a5ebb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "Projects/Homelab/Proxmox Cluster/create arch linux CT with Web UI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "create arch linux CT with Web UI"
             }
           }
-        ],
-        "currentTab": 12
+        ]
       }
     ],
     "direction": "vertical"
@@ -247,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 565.5
   },
   "right": {
     "id": "b4405eff324dbdf4",
@@ -342,49 +173,50 @@
   },
   "active": "77f3d8c3ee2a5ebb",
   "lastOpenFiles": [
-    "LDAP Server/Add password manager.md",
-    "Obsidian Notes/create obsidian web server  in proxmox container.md",
+    "Projects/Homelab/Proxmox Cluster/create arch linux VM with Web UI.md",
+    "Pasted image 20250920233952.png",
+    "Pasted image 20250920233610.png",
+    "Projects/Homelab/Proxmox Cluster/init  pacman for  arch linux in proxmox CT.md",
+    "Projects/Homelab/Proxmox Cluster/install postfix with gmail for proxmox mails.md",
+    "Pasted image 20250920232346.png",
+    "Pasted image 20250920225455.png",
+    "Pasted image 20250920225335.png",
+    "Projects/Homelab/Proxmox Cluster/Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox).md",
+    "Projects/Homelab/Proxmox Cluster/create arch linux CT with cli.md",
+    "Projects/Homelab/Proxmox Cluster/create arch linux CT with Web UI.md",
+    "Projects/Homelab/Proxmox Cluster/proxmox firewall.md",
+    "Pasted image 20250916121512.png",
+    "Knowledge Base",
+    "Projects/Homelab/NAS",
+    "Projects/Homelab/Docker Registry Server",
+    "Projects/Homelab/Web Server",
+    "Projects/Homelab/Reverse Proxy/create https certificate and add it to DNS.md",
+    "Projects/Homelab/Reverse Proxy",
+    "Projects/Homelab/Proxmox Cluster/level 2/level 3/level 3 note.md",
+    "Projects/Homelab/Proxmox Cluster/level 2/level 3",
+    "Projects/Homelab/Proxmox Cluster/level 2/level 2 note.md",
+    "Projects/Homelab/Docker Registry Server/set up docker registry.md",
+    "Projects/Homelab/Proxmox Cluster/level 2",
+    "Projects/Homelab/Proxmox Cluster",
+    "Projects/Homelab/Password Server",
+    "Projects/Homelab/Reverse proxy/create https certificate and add it to DNS.md",
+    "Projects/Homelab/Reverse proxy",
+    "Projects/Homelab/Proxmox cluster/level 2/level 3/level 3 note.md",
+    "Projects/Homelab/Proxmox cluster/level 2/level 2 note.md",
+    "Projects/Homelab/Proxmox cluster/set up docker registry.md",
+    "Projects/Homelab/Proxmox cluster/proxmox firewall.md",
+    "Projects/Homelab/Proxmox cluster/postfix on proxmox.md",
+    "Projects/Homelab/Proxmox cluster/init  pacman in new arch linux machine.md",
+    "Projects/Homelab/Proxmox cluster/create arch linux VM with Web UI.md",
+    "Projects/Homelab/Proxmox cluster/create arch linux CT with cli.md",
+    "Projects/Homelab/Proxmox cluster/create arch linux CT with Web UI.md",
+    "Projects/Homelab/Proxmox cluster/Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox).md",
+    "Projects/Homelab/Notes Server/create obsidian web server  in proxmox container.md",
+    "Knowledge Base/Linux/install yay on arch linux.md",
     "Welcome.md",
-    "Untitled 1.base",
-    "Proxmox/level 2/level 2 note.md",
-    "Proxmox/level 2/level 3/level 3 note.md",
-    "Proxmox/Arch Linux LXC Container Template Creation with LDAP Setup (Proxmox).md",
-    "Proxmox/create arch linux VM with Web UI.md",
-    "Proxmox/level 2/level 3",
-    "Proxmox/create arch linux CT with Web UI.md",
-    "Proxmox/level 2",
     "Pasted image 20250916121302.png",
-    "Proxmox/set up docker registry.md",
-    "Proxmox/init  pacman in new arch linux machine.md",
-    "Linux/start proxmox container.md",
-    "reverse proxy/create https certificate and add it to DNS.md",
     "Pasted image 20250918174809.png",
-    "README.md",
-    "Proxmox/proxmox firewall.md",
-    "LDAP Server/add ldap users to VM.md",
-    "LDAP Server/add ldap users to CT machine.md",
-    "Linux/add ssh key to server on arch machine to access repo.md",
     "Pasted image 20250918175625.png",
-    "Linux/add ssh key to user on arch machine.md",
-    "LDAP Server/create ldap-server in proxmox container.md",
-    "Pasted image 20250918174927.png",
-    "Pasted image 20250918174752.png",
-    "Pasted image 20250918174709.png",
-    "Pasted image 20250918174456.png",
-    "Pasted image 20250918174327.png",
-    "Pasted image 20250918174239.png",
-    "Pasted image 20250917234307.png",
-    "Proxmox/create arch linux CT with cli.md",
-    "reverse proxy",
-    "Linux/install yay on arch linux.md",
-    "Linux/add user to sudoer.md",
-    "Untitled.base",
-    "Untitled 2.base",
-    "Linux",
-    "Proxmox/test/dddddd.md",
-    "Proxmox/level 2",
-    "Untitled 1",
-    "Proxmox",
-    "Proxmox/postfix on proxmox.md"
+    "Pasted image 20250918174927.png"
   ]
 }
